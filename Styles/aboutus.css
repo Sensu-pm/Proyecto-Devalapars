@@ -25,11 +25,13 @@ h2{
     font-family: 'Lora', serif;
     font-size: 40px;
 }
-.about {
+.aboutus {
     font-size: 50px;
 
 
 }
+
+
 .boton{
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
@@ -43,6 +45,10 @@ h2{
     border-radius: 4px;
     margin-bottom: 100px;
 
+}
+
+.padding{
+    padding: 100px;
 }
 
 

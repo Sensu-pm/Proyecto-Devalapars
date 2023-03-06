@@ -1,0 +1,36 @@
+body{
+    background-color: #F0E9E3;
+}
+
+
+
+.col-6{
+    width: 563px;
+    height: 699px;
+    left: 98px;
+    top: 169px;
+    margin: auto;
+    margin-top: 75px;
+    padding: 5.5%;
+    color: black;
+    font-size: 20px; 
+    font-family: 'Quicksand', sans-serif;
+
+    background: #D9D9D9;
+    box-shadow: 11px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+}
+
+
+
+h1{
+    text-align: center;
+    padding-bottom: 30px;
+    font-family: 'Lora', serif;
+}
+
+.btn{
+    background-color: #5CA7A3;
+    min-width: 50%;
+    margin: 7%;
+}

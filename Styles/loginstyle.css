@@ -45,7 +45,7 @@ h1{
     font-family: 'Lora', serif;
 }
 
-.btn{
+.btn-dark{
     background-color: #5CA7A3;
     min-width: 50%;
     margin: 7%;
@@ -55,3 +55,58 @@ h1{
     text-align: center;
     display: block;
 }
+
+
+#footer {
+    background-color: #d9d9d9;
+    margin-top: 100px;
+  }
+  .about {
+    color: black;
+    font-family: lora;
+  }
+  .texto {
+    color: black;
+    font-family: quicksand;
+  }
+  
+  .btn .btn-floating .btn-lg {
+    color: #836b98;
+  }
+  
+  .info {
+    color: black;
+    font-family: lora;
+    display: inline-block;
+  }
+  
+  i {
+    margin-right: 10px;
+  }
+  
+  .textofinal {
+    text-align: center;
+    color: black;
+    background-color: #d9d9d9;
+    font-family: lora;
+  }
+  
+  .pagos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .form-inline {
+    display: center;
+  }
+  
+  .buttons {
+    padding: 12px;
+    font-size: 15px;
+    width: 50px;
+  
+    border-radius: 50%;
+  }
+  

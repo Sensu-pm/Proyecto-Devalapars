@@ -1,65 +1,117 @@
-body{
-    background-color: #F0E9E3;
+body {
+  background-color: #f0e9e3;
 }
 
-#cajaContactanos{
-    width: 540px;
-    height: 616px;
-    left: 140px;
-    top: 135px;
-    
-    background: #D9D9D9;
-    box-shadow: 11px 4px 17px rgba(0, 0, 0, 0.25);
-    border-radius: 14px;   
-    padding: 50px;
-    margin: auto;
-    margin-top: 50px;
+#cajaContactanos {
+  width: 540px;
+  height: 616px;
+  left: 140px;
+  top: 135px;
+
+  background: #d9d9d9;
+  box-shadow: 11px 4px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  padding: 50px;
+  margin: auto;
+  margin-top: 50px;
 }
 
-#cajaDeDatos div{
-    background: #836B98;
-    border-radius: 14px;
-    color: white;
-    margin: auto;
-    max-height: 500px;
+#cajaDeDatos div {
+  background: #836b98;
+  border-radius: 14px;
+  color: white;
+  margin: auto;
+  max-height: 500px;
 
-    font-size: 20px; 
-    font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
 }
-#cajaDeDatos h1{
-    text-align: center;
-    padding-bottom: 30px;
-    font-family: 'Lora', serif;
+#cajaDeDatos h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-family: "Lora", serif;
 }
-#cajaDeDatos p{
-    padding: 20px;
-    font-family: 'Quicksand', sans-serif;
-}
-
-
-
-
-#cajaDatosDeContacto{
-    width: 540px;
-    height: 616px;
-    left: 140px;
-    top: 135px;
-
-    background: #D9D9D9;
-    color: black;
-    box-shadow: 11px 4px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 14px;
-    padding: 50px;
-    font-family: "Quicksand";
-    margin: auto;
-    margin-top: 50px;
+#cajaDeDatos p {
+  padding: 20px;
+  font-family: "Quicksand", sans-serif;
 }
 
-.btn{
-    background-color: #5CA7A3;
-    min-width: 50%;
+#cajaDatosDeContacto {
+  width: 540px;
+  height: 616px;
+  left: 140px;
+  top: 135px;
+
+  background: #d9d9d9;
+  color: black;
+  box-shadow: 11px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  padding: 50px;
+  font-family: "Quicksand";
+  margin: auto;
+  margin-top: 50px;
+}
+
+.btn-dark {
+  background-color: #5ca7a3;
+  min-width: 50%;
 }
 
 #cajaDatosDeContacto input[type="text"]#formGroupExampleInput3 {
-    height: 150px; 
+  height: 150px;
+}
+
+/*------------------------------------------*/
+
+
+#footer {
+  background-color: #d9d9d9;
+}
+.about {
+  color: black;
+  font-family: lora;
+}
+.texto {
+  color: black;
+  font-family: quicksand;
+}
+
+.btn .btn-floating .btn-lg {
+  color: #836b98;
+}
+
+.info {
+  color: black;
+  font-family: lora;
+  display: inline-block;
+}
+
+i {
+  margin-right: 10px;
+}
+
+.textofinal {
+  text-align: center;
+  color: black;
+  background-color: #d9d9d9;
+  font-family: lora;
+}
+
+.pagos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.form-inline {
+  display: center;
+}
+
+.buttons {
+  padding: 12px;
+  font-size: 15px;
+  width: 50px;
+
+  border-radius: 50%;
 }

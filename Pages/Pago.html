@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Carrito</title>
+
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../Styles/footy.css">
+    <link rel="stylesheet" href="../Styles/nav.css">
+    <link href="../Styles/form-validation.css" rel="stylesheet">
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <!--fuente quicksand-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+    
+
+
+    <!-- <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style> -->
+   
+  </head>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" style="background-color: #D9D9D9;">
+        <div class="container-fluid align-items-center">
+
+            <a class="navbar-brand" href="#">
+                <img src="../Imgs/logo-transparente.png" alt="Bootstrap" width="50"
+                height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+<!-- . -->
+            <div class="navbar-nav ms-auto container col-10" id="menucolap">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Quiénes somos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Libros
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Anime</a></li>
+                                <li><a class="dropdown-item" href="#">Terror</a></li>
+                                <li><a class="dropdown-item" href="#">Ciencia Ficción</a></li>
+                                <li><a class="dropdown-item" href="#">Romance</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Otros artículos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Contáctanos</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="¿Qué titulo buscas?" aria-label="Search">
+                        <button class="btn btn-outline-success" style="background-color: #5CA7A3; color: #F0E9E3;"type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="container col-4">
+                <!-- User -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#A18262"class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                    </svg>
+                    <!-- Carrito de compras -->
+                    
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#A18262" class="bi bi-cart3" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+            </div>
+            
+        </div>
+    </nav>
+</header>
+
+  <body class="bg-light">
+    
+    
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="../Imgs/logo-transparente.png" alt="" width="90" height="90" style="margin-top: 70px;">
+      <h2>Datos de pago</h2>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text">Resúmen</span>
+          <span class="badge  rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Product name</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Second product</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Third item</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Promo code</h6>
+              <small>EXAMPLECODE</small>
+            </div>
+            <span class="text-success">−$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Promo code">
+            <button type="submit" class="btn btn-secondary">Canjear código</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Datos de envio</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Se requiere un nombre válido.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Se requiere un apellido válido.
+              </div>
+            </div>
+
+            <!-- <div class="col-12">
+              <label for="username" class="form-label">Usuario</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div> -->
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+              <input type="email" class="form-control" id="email" placeholder="tucorreo@correo">
+              <div class="invalid-feedback">
+                Ingresa un Email válido
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="address" placeholder="Calle No." required>
+              <div class="invalid-feedback">
+                Por favor ingresa tu dirección de envio
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Instrucciones <span class="text-muted">(Opcional)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Instrucciónes de entrega">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">País</label>
+              <select class="form-select" id="country" required>
+                <option value="">Elegir...</option>
+                <option>México</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona un país válido.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Estado</label>
+              <select class="form-select" id="state" required>
+                <option value="">Elegir...</option>
+                <option>Aguascalientes</option>
+                <option>Baja California</option>
+                <option>Baja California sur</option>
+                  <option>Campeche</option>
+                  <option>Coahuila</option>
+                  <option>Colima</option>
+                  <option>Chiapas</option>
+                  <option>Chihuahua</option>
+                  <option>CDMX</option>
+                  <option>Durango</option>
+                  <option>Guanajuato</option>
+                  <option>Guerrero</option>
+                  <option>Hidalgo</option>
+                  <option>Jalisco</option>
+                  <option>México</option>
+                  <option>Michoacán</option>
+                  <option>Morelos</option>
+                  <option>Nayarit</option>
+                  <option>Nuevo León</option>
+                  <option>Oaxaca</option>
+                  <option>Puebla</option>
+                  <option>Querétaro</option>
+                  <option>Quintana Roo</option>
+                  <option>San Luis Potosí</option>
+                  <option>Sinaloa</option>
+                  <option>Sonora</option>
+                  <option>Tabasco</option>
+                  <option>Tamaulipas</option>
+                  <option>Tlaxcala</option>
+                  <option>Veracruz</option>
+                  <option>Yucatán</option>
+                  <option>Zacatecas</option>
+              
+                
+              </select>
+              <div class="invalid-feedback">
+                Selecciona un estado válido
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">C.P.</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <div class="invalid-feedback">
+                Ingrega el Código postal.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address">La dirección de factura es la misma que la entrega</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">Guardar información</label>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Pago</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Tarjeta de credito</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="debit">Tarjeta de debito</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+            <div class="form-check">
+              <input id="oxxo" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="oxxo">OXXO</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Nombre de la tarjeta</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">Nombre como aparece en la tarjeta</small>
+              <div class="invalid-feedback">
+                Nombre de la tarjeta es requerido
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Número de la tarjeta</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+                Número de la tarjeta es requerido
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">MM/AA</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+              <div class="invalid-feedback">
+                Fecha de expiración es requerido
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+              <div class="invalid-feedback">
+                CVV es requerido
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-lg" type="submit" style="background-color: #5CA7A3; color: white;">Continuar con el pago</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <div class="padding-div"> </div>
+  
+</div>
+
+  <!-- inicio footer -->
+  <section>
+    <footer>
+      <!--intento de cajas-->
+      <div class="container-fluid text-center">
+        <div class="row align-items-start">
+          <div class="col">
+            Sobre capybara books
+          </div>
+          <div class="col">
+            <label for="newsletter"><span class="texto">Regístrate a nuestro newsletter</span></label>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <br>
+          <div class="col">
+            <div class="align-content-around">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta, sit cum culpa dolores debitis, quia necessitatibus ex beatae omnis itaque tenetur consequuntur eum officia velit natus, ipsum asperiores aliquam.
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-inline">
+              <label for="email" class="form-label"></label>
+              <input type="email" class="form-control" id="exampleFormControlInput1"  placeholder="nombre@correo.com" style="width:min-content; display:inline-flex">
+              <button type="submit" class="btn btn-secondary btn-sm" style="display: inline-flex;">Registrarme</button>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row align-items-center">
+          <div class="col d-flex justify-content-evenly">
+            <a class="bi bi-facebook" href="https://www.facebook.com" style="color: black;"></a>
+            <a class="bi bi-twitter" href="https://www.twitter.com" style="color: black;"></a>
+            <a class="bi bi-tiktok" href="https://www.tiktok.com" style="color: black;"></a>
+            <a class="bi bi-whatsapp" href="https://www.whatsapp.com" style="color: black;"></a>
+          </div>
+          <div class="col">
+            <i class="bi bi-geo-alt-fill"></i><h6 class="info">Capylandia, México</h6>
+          </div>
+        </div>
+        <br><br>
+        <div class="row align-items-center">
+          <div class="pagos">
+            <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/american.png" alt="american express" class="" width="40" height="40" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/american.png">
+            <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/carnet.png" alt="carnet" class="" width="52" height="40" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/carnet.png">
+            
+            <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/master-card.png" alt="master card" class="" width="44" height="40" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/master-card.png">
+            
+            <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/visa.png" alt="visa" class="" width="90" height="38" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/visa.png">
+            
+            <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/paypal.png" alt="paypal" class="" width="90" height="29" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/paypal.png">
+            
+          </div>
+          <br> <br>
+          <div class="row align-items-end">
+            <h6 class="textofinal">
+          © 2023 Copyright: Team Develapars
+        </h6>
+      </div>
+    </div>
+    </footer>
+  </section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="../Js/form-validation.js"></script>
+  </body>
+</html>

@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contactanos</title>
+
+    <!-- bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+    <!-- Hoja de estilo -->
     <link rel="stylesheet" href="../Styles/Contactstyle.css" />
+
+    <!-- fuentes de google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,8 +38,9 @@
         <a class="navbar-brand" href="#">Navbar</a>
       </div>
     </nav>
-    <div class="container-fluid">
-      <div class="row flex-wrap">
+    <div class="container-fluid" id="cajasDeContacto">
+      <div class="row align-items-center">
+        <!-- caja de datos de contacto -->
         <div id="cajaContactanos">
           <div class="col" id="cajaDeDatos">
             <h1>Contáctanos</h1>
@@ -52,6 +61,7 @@
             </div>
           </div>
         </div>
+        <!-- caja de Contacto -->
         <div id="cajaDatosDeContacto">
           <div class="col">
             <div class="mb-3">
@@ -94,13 +104,74 @@
                 id="formGroupExampleInput3"
               />
             </div>
-            <div class="mb-3 d-flex justify-content-center align-items-center">
+            <div class="mb-3 d-flex justify-content-center align-items-center" id="botonEnviar">
               <button class="btn btn-dark" type="submit">Enviar</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+<br><br><br>
+    <footer class="padding-foot">
+      <!--intento de cajas-->
+      <div class="container-fluid text-center" id="footer">
+        <div class="row align-items-start">
+          <div class="col">
+            Sobre capybara books
+          </div>
+          <div class="col">
+            <label for="newsletter"><span class="texto">Regístrate a nuestro newsletter</span></label>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <br>
+          <div class="col">
+            <div class="align-content-around">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta, sit cum culpa dolores debitis, quia necessitatibus ex beatae omnis itaque tenetur consequuntur eum officia velit natus, ipsum asperiores aliquam.
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-inline">
+              <label for="email" class="form-label"></label>
+              <input type="email" class="form-control" id="exampleFormControlInput1"  placeholder="nombre@correo.com" style="width:min-content; display:inline-flex">
+              <button type="submit" class="btn btn-secondary btn-sm" style="display: inline-flex;" id="botonRegistrarme">Registrarme</button>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row align-items-center">
+          <div class="col d-flex justify-content-evenly">
+            <a class="bi bi-facebook" href="https://www.facebook.com" style="color: black;"></a>
+            <a class="bi bi-twitter" href="https://www.twitter.com" style="color: black;"></a>
+            <a class="bi bi-tiktok" href="https://www.tiktok.com" style="color: black;"></a>
+            <a class="bi bi-whatsapp" href="https://www.whatsapp.com" style="color: black;"></a>
+          </div>
+          <div class="col">
+            <i class="bi bi-geo-alt-fill"></i><h6 class="info">Capylandia, México</h6>
+          </div>
+        </div>
+        <br><br>
+        <div class="row align-items-center">
+          <div class="pagos">
+            <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/american.png" alt="american express" class="" width="40" height="40" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/american.png">
+            <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/carnet.png" alt="carnet" class="" width="52" height="40" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/carnet.png">
+          
+            <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/master-card.png" alt="master card" class="" width="44" height="40" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/master-card.png">
+    
+            <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/visa.png" alt="visa" class="" width="90" height="38" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/visa.png">
+          
+            <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/paypal.png" alt="paypal" class="" width="90" height="29" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/paypal.png">
+          
+        </div>
+        <br> <br>
+        <div class="row align-items-end">
+          <h6 class="textofinal">
+            © 2023 Copyright: Team Develapars
+          </h6>
+        </div>
+      </div>
+      </footer>
+      <script src="https://kit.fontawesome.com/ba97aac3b4.js" crossorigin="anonymous"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

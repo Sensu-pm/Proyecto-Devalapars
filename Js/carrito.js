@@ -1,4 +1,4 @@
-const ClickButton = document.querySelectorAll('.card-btn')
+const ClickButton = document.querySelectorAll('.card-btn, .boton')
 
  const tbody = document.querySelector('tbody')
 
@@ -11,10 +11,10 @@ ClickButton.forEach(btn => {
 
 function addToCarritoItem (e){
   const button = e.target
-  const item = button.closest('.product-card')
+  const item = button.closest('.product-card, .card')
   const itemTitle = item.querySelector('.product-brand').textContent;
   const itemPrice = item.querySelector('.price').textContent;
-  const itemImage = item.querySelector('.product-thumb').src;
+  const itemImage = item.querySelector('.product-thumb, .portada').src;
   
   const objetosCarrito  = {
     title: itemTitle,

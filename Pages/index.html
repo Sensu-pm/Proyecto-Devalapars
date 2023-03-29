@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../Styles/nav.css">
   <link rel="stylesheet" href="../Styles/foother.css">
   <link rel="stylesheet" href="../Styles/style-navbar-Dan.css">
+  <link rel="stylesheet" href="../Styles/carrito.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../Assets/bootstrap-5.2.3-dist/css/bootstrap.min.css">
@@ -83,9 +84,11 @@
                         </li>
                         <!-- Icon dropdown -->
                         <li class="nav-item me-3 me-lg-0">
-                            <a class="nav-link" href="../Pages/Pago.html">
+                          <button class="btn tbody" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-cart3" style=" color: #A18262;"></i></button>
+                        <li class="nav-item me-3 me-lg-0">
+                            <!-- <a class="nav-link" href="../Pages/Pago.html">
                                 <i class="bi bi-cart3" style=" color: #A18262;"></i>
-                            </a>
+                            </a> -->
                     </ul>
                 </div>
 
@@ -96,8 +99,42 @@
         </div>
     </nav>
 </header> <!--termina navbar-->
-  <br>
-  <br>
+<!-- offcanvas carrito -->
+<div class="offcanvas offcanvas-end tbody" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="contenedor-productos">
+      <table class="carrito table">
+          <thead>
+            <tr class="style">
+              <th scope="col">#</th>
+              <th scope="col">Productos</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="col-4 tbody table-striped">
+              <!-- aqui se inserta con el DOM carrito.js -->
+  
+              
+          </tbody>
+        </table>
+        <br><br>
+        <div class="row mx-4">
+          <div class="col">
+              <h3 class="itemCartTotal">Total: 0</h3>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <a class="nav-link" href="./Pago.html">   <div class="btn btn-success">Ir Pagar </div> </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  <br><br>
   <!--Logo capybara-->
   <section>
     <div class="row" style="margin-top: 70px;">
@@ -350,6 +387,7 @@
         </div>
       </div>
   </footer>
+  <script src="../Js/carrito.js"></script>
   <script src="https://kit.fontawesome.com/ba97aac3b4.js" crossorigin="anonymous"></script>
   <script src="../Js/script.js"></script>
   <script src="../Assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>

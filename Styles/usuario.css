@@ -1,0 +1,80 @@
+body {
+    background-color: #f0e9e3;
+}
+h1 h2{
+    font-family: "Lora", serif;
+}
+p{
+    font-family: "Quicksand", sans-serif;
+}
+
+#usuarioInterfaz{
+    margin: 10px;
+}
+
+#InformacionDeRegistro{
+    background: #d9d9d9;
+    box-shadow: 11px 4px 17px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    padding: 50px;
+}
+#InformacionDeEnvio{
+    background: #d9d9d9;
+    box-shadow: 11px 4px 17px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    padding: 50px;
+}
+
+#footer {
+    background-color: #d9d9d9;
+}
+
+.about {
+    color: black;
+    font-family: lora;
+}
+
+.texto {
+    color: black;
+    font-family: quicksand;
+}
+
+.btn .btn-floating .btn-lg {
+    color: #836b98;
+}
+
+.info {
+    color: black;
+    font-family: lora;
+    display: inline-block;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.textofinal {
+    text-align: center;
+    color: black;
+    background-color: #d9d9d9;
+    font-family: lora;
+}
+
+.pagos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.form-inline {
+    display: center;
+}
+
+.buttons {
+    padding: 12px;
+    font-size: 15px;
+    width: 50px;
+
+    border-radius: 50%;
+}

@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    font-family: 'Lora', serif;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+
+}
+
+#menucolap {
+    display: flex;
+    justify-content: center;
+
+}

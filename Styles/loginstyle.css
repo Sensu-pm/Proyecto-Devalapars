@@ -1,0 +1,114 @@
+body{
+    background-color: #F0E9E3;
+}
+
+
+#cajaIngresar{
+    width: 563px;
+    height: 699px;
+    left: 98px;
+    top: 169px;
+    margin: auto;
+    margin-top: 75px;
+    padding: 5.5%;
+    color: black;
+    font-size: 20px; 
+    font-family: 'Quicksand', sans-serif;
+
+    background: #D9D9D9;
+    box-shadow: 11px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+}
+
+
+#cajaCrearCuenta{
+    width: 563px;
+    height: 699px;
+    left: 98px;
+    top: 169px;
+    margin: auto;
+    margin-top: 75px;
+    padding: 5.5%;
+    color: black;
+    font-size: 20px; 
+    font-family: 'Quicksand', sans-serif;
+
+    background: #D9D9D9;
+    box-shadow: 11px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+}
+
+
+h1{
+    text-align: center;
+    padding-bottom: 30px;
+    font-family: 'Lora', serif;
+}
+
+.btn-dark{
+    background-color: #5CA7A3;
+    min-width: 50%;
+    margin: 7%;
+}
+
+.Capylogo{
+    text-align: center;
+    display: block;
+}
+
+
+/*------------------------------------------*/
+
+
+#footer {
+    background-color: #d9d9d9;
+  }
+  .about {
+    color: black;
+    font-family: lora;
+  }
+  .texto {
+    color: black;
+    font-family: quicksand;
+  }
+  
+  .btn .btn-floating .btn-lg {
+    color: #836b98;
+  }
+  
+  .info {
+    color: black;
+    font-family: lora;
+    display: inline-block;
+  }
+  
+  i {
+    margin-right: 10px;
+  }
+  
+  .textofinal {
+    text-align: center;
+    color: black;
+    background-color: #d9d9d9;
+    font-family: lora;
+  }
+  
+  .pagos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .form-inline {
+    display: center;
+  }
+  
+  .buttons {
+    padding: 12px;
+    font-size: 15px;
+    width: 50px;
+  
+    border-radius: 50%;
+  }
+  

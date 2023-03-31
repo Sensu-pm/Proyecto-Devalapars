@@ -105,60 +105,75 @@
                     <img src="../img/logo-transparente.png" alt="Capylogo" width="130px">
                 </div>
                 <h1>Ingresar</h1>
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4">
-                <label for="inputPassword4" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword4">
-                <div class="mb-3 d-flex justify-content-center align-items-center">
-                    <button class="btn btn-dark" type="submit">Enviar</button>
-                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Ingrese su correo electrónico" required>
+                        <div class="valid-feedback">Correcto</div>
+                        <div class="invalid-feedback">Ingrese un correo electrónico válido</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Ingrese su contraseña" required>
+                        <div class="valid-feedback">Correcto</div>
+                        <div class="invalid-feedback">Ingrese una contraseña válida</div>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-dark" type="submit">Enviar</button>
+                    </div>
+                </form>
             </div>
+            
             <!-- caja de crear cuenta -->
             <form class="col-6 needs-validation" novalidate id="cajaCrearCuenta">
                 <h1>Crear cuenta</h1>
-                <div>
+                <div class="form-group">
                     <label for="validationCustom01" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="validationCustom01" value="" required>
                     <div class="valid-feedback">
-                      Bien
+                        Bien
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor ingrese su nombre
                     </div>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="validationCustomUsername" class="form-label">Nombre de usuario</label>
                     <div class="input-group has-validation">
-                      <span class="input-group-text" id="inputGroupPrepend">@</span>
-                      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                      <div class="invalid-feedback">
-                        Por favor escoge un nombre de usuario
-                      </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="validationCustom01" class="form-label">Correo electronico</label>
-                            <input type="email" class="form-control" id="validationCustom01" value="" required>
-                            <div class="valid-feedback">
-                              Correo valido
-                            </div>
-                            <div class="invalid-feedback">
-                                Correo invalido
-                              </div>
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <div class="valid-feedback">
+                            Nombre de usuario válido
                         </div>
-                        <div>
-                            <label for="validationCustom01" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="validationCustom01" value="" required>
-                            <div class="valid-feedback">
-                              Contraseña segura
-                            </div>
-                            <div class="invalid-feedback">
-                                Contraseña invalida
-                              </div>
-                        </div>
-                        <div class="mb-3 d-flex justify-content-center align-items-center">
-                            <button class="btn btn-dark" type="submit">Enviar</button>
+                        <div class="invalid-feedback">
+                            Por favor elija un nombre de usuario válido
                         </div>
                     </div>
                 </div>
-            </form>
+                <div class="form-group">
+                    <label for="validationCustomEmail" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="validationCustomEmail" value="" required>
+                    <div class="valid-feedback">
+                        Correo electrónico válido
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor ingrese un correo electrónico válido
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="validationCustomPassword" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="validationCustomPassword" value="" required>
+                    <div class="valid-feedback">
+                        Contraseña segura
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor ingrese una contraseña válida
+                    </div>
+                </div>
+                <div class="mb-3 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-dark" type="submit">Enviar</button>
+                </div>
+            </form>            
         </div>
     </div>
 <br><br><br>

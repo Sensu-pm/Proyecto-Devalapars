@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
+<!--termina navbar-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../Assets/bootstrap-5.2.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Styles/style-navbar-Dan.css">
-    <link rel="stylesheet" href="../Styles/footer.css">
-    <link rel="stylesheet" href="../Styles/cultura.css">
+    <title>Cultura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/cultura.css">
+    <link rel="stylesheet" href="./style/carrito.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +22,8 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" style="background-color: #D9D9D9;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../Pages/index.html">
-                <img src="/Img/logo-transparente.png"  alt="Bootstrap" width="50" height="50">
+            <a class="navbar-brand" href="#">
+                <img src="/Img/logo-transparente.png" alt="Bootstrap" width="50" height="50">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -34,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../Pages/aboutus.html">Quiénes somos</a>
+                            <a class="nav-link active" aria-current="page" href="#">Quiénes somos</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -46,14 +48,14 @@
                                 <li><a class="dropdown-item" href="#">Terror</a></li>
                                 <li><a class="dropdown-item" href="#">Ciencia Ficción</a></li>
                                 <li><a class="dropdown-item" href="#">Romance</a></li>
-                                <li><a class="dropdown-item" href="../Pages/cultura.html">Cultura</a></li>
+                                <li><a class="dropdown-item" href="#">Cultura</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Otros artículos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Pages/Contactanos.html">Contáctanos</a>
+                            <a class="nav-link">Contáctanos</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -70,15 +72,15 @@
                     <ul class="navbar-nav d-flex flex-row">
                         <!-- Icons -->
                         <li class="nav-item me-3 me-lg-0">
-                            <a class="nav-link" href="../Pages/login.html">
+                            <a class="nav-link" href="#">
                                 <i class="bi bi-person" style="position: absolute; color: #A18262;"></i>
                             </a>
                         </li>
                         <!-- Icon dropdown -->
+
+                        <button class="btn tbody" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-cart3" style=" color: #A18262;"></i></button>
                         <li class="nav-item me-3 me-lg-0">
-                            <a class="nav-link" href="../Pages/Pago.html">
-                                <i class="bi bi-cart3" style=" color: #A18262;"></i>
-                            </a>
+                            
                     </ul>
                 </div>
 
@@ -88,7 +90,44 @@
 
         </div>
     </nav>
-</header> <!--termina navbar-->
+</header>
+<div class="offcanvas offcanvas-end tbody" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Bolsa</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="contenedor-productos">
+      <table class="carrito table">
+          <thead>
+            <tr class="style">
+              <th scope="col">#</th>
+              <th scope="col">Productos</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="col-4 tbody table-striped">
+              <!-- tr de js  -->
+  
+              
+          </tbody>
+        </table>
+        <br><br>
+        <div class="row mx-4">
+          <div class="col">
+              <h3 class="itemCartTotal">Total: 0</h3>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <a class="nav-link" href="./Pago.html">   <div class="btn btn-success">Ir Pagar </div> </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
     <div class="container" >
       <!--CARRUSEL DE LIBROS No.1-->
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -259,49 +298,57 @@
       <h2 class="padding-p">Libros de Cultura</h2>
       <br>
   
-      <div class="container text-center">
+      <div class="container text-center ">
         <div class="row align-items-start">
           <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../img/Cultura_images/Anticristo.jpg" class="card-img-top" alt="...">
+            <div class="card hover scale-up" style="width: 18rem;">
+              <img src="../img/Cultura_images/Anticristo.jpg" class="portada card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">El Anticristo</h5>
+                <h5 class="card-title product-brand">El Anticristo</h5>
                 <p class="card-text">Friedrich Nietzsche</p>
-                <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                <a href="" target="_blank" class="boton bi bi-cart"></a>
+                <p class="price">$120.89</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../img/Cultura_images/cuervo.jpg" class="card-img-top" alt="...">
+            <div class="card hover scale-up" style="width: 18rem;">
+              <img src="../img/Cultura_images/cuervo.jpg" class="portada card-img-top product-thumb" alt="...">
               <div class="card-body">
-                <h5 class="card-title">El Cuervo</h5>
+                <h5 class="card-title product-brand">El Cuervo</h5>
                 <p class="card-text">Edgar Allan Poe</p>
-                <a href="" target="_blank" class="boton bi-info-circle-fill" viewBox="0 0 16 16"></a>
-                <a href="" target="_blank" class="boton bi bi-cart"></a>
+                <p class="price">$120.45</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
               </div>
             </div>
           </div>
+
+
+
+          
           <div class="col">
             <div class="card" style="width: 18rem;">
-              <img src="../img/Cultura_images/demian.jpg" class="card-img-top" alt="...">
+              <img src="../img/Cultura_images/demian.jpg" class="portada card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Demian</h5>
+                <h5 class="card-title product-brand">Demian</h5>
                 <p class="card-text">Hermann Hesse</p>
-                <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                <a href="" target="_blank" class="boton bi bi-cart"></a>
+                <p class="price"> $300</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card" style="width: 18rem;">
-              <img src="../img/Cultura_images/fausto.jpg" class="card-img-top" alt="...">
+              <img src="../img/Cultura_images/fausto.jpg" class="portada card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Fausto</h5>
+                <h5 class="card-title product-brand">Fausto</h5>
                 <p class="card-text">Johann Wolfgang Von Goethe</p>
-                <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                <a href="" target="_blank" class="boton bi bi-cart"></a>
+                <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
               </div>
             </div>
           </div>
@@ -316,177 +363,197 @@
   
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/InteligenciaEmocional.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/InteligenciaEmocional.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Inteligencia Emocional</h5>
+                    <h5 class="card-title product-brand">Inteligencia Emocional</h5>
                     <p class="card-text">Daniel Goleman</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/divCom.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/divCom.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">La Divina Comedia</h5>
+                    <h5 class="card-title product-brand">La Divina Comedia</h5>
                     <p class="card-text">Dante Alighieri</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                    <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                    <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/LaRepublica.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/LaRepublica.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">La Republica</h5>
+                    <h5 class="card-title product-brand">La Republica</h5>
                     <p class="card-text">Platón</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/MagodeOz.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/MagodeOz.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">El Mago de Oz</h5>
+                    <h5 class="card-title product-brand">El Mago de Oz</h5>
                     <p class="card-text">Frank Lyman Baum</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/masAllaBM.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/masAllaBM.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Más allá del bien y del mal</h5>
+                    <h5 class="card-title product-brand">Más allá del bien y del mal</h5>
                     <p class="card-text">Friedrich Nietzsche</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/ramayana.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/ramayana.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">El Ramayana</h5>
+                    <h5 class="card-title product-brand">El Ramayana</h5>
                     <p class="card-text">Valmiki</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/Rebelion.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/Rebelion.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Rebelion en la granja</h5>
+                    <h5 class="card-title product-brand">Rebelion en la granja</h5>
                     <p class="card-text">George Orwell</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/rueda.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/rueda.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Bajo la Rueda</h5>
+                    <h5 class="card-title product-brand">Bajo la Rueda</h5>
                     <p class="card-text">Hermann Hesse</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/siddhartha.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/siddhartha.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Siddhartha</h5>
+                    <h5 class="card-title product-brand">Siddhartha</h5>
                     <p class="card-text">Hermann Hesse</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/Sodoma.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/Sodoma.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Los 120 días de Sodoma </h5>
+                    <h5 class="card-title product-brand">Los 120 días de Sodoma </h5>
                     <p class="card-text">Friedrich Nietzsche</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/TeoriaDelTodo.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/TeoriaDelTodo.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">La Teoría del Todo</h5>
+                    <h5 class="card-title product-brand">La Teoría del Todo</h5>
                     <p class="card-text">Stephen W. Hawking </p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
+
+
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/unMundoFeliz.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/unMundoFeliz.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Un Mundo Féliz</h5>
+                    <h5 class="card-title product-brand">Un Mundo Féliz</h5>
                     <p class="card-text">Aldous Huxley</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
+
+              
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/ViajeCTierra.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/ViajeCTierra.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Viaje al centro de la Tierra</h5>
+                    <h5 class="card-title product-brand">Viaje al centro de la Tierra</h5>
                     <p class="card-text">Julio Verne</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/zaratustra.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/zaratustra.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Así hablaba Zaratustra</h5>
+                    <h5 class="card-title product-brand">Así hablaba Zaratustra</h5>
                     <p class="card-text">Friedrich Nietzsche</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/necronomicon.png" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/necronomicon.png" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">La historia del Necronomicon</h5>
+                    <h5 class="card-title product-brand">La historia del Necronomicon</h5>
                     <p class="card-text">H. P. Lovecraft</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/Fierecilla.jpg" class="card-img-top" alt="...">
+                  <img src="../img/Cultura_images/Fierecilla.jpg" class="portada card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">La Fierecilla Domada</h5>
+                    <h5 class="card-title product-brand">La Fierecilla Domada</h5>
                     <p class="card-text">William Shakespeare</p>
-                    <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                    <a href="" target="_blank" class="boton bi bi-cart"></a>
+                    <p class="price"> $150.89</p>
+                <button class=" bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                <button class="boton bi bi-cart"></button>
                   </div>
                 </div>
               </div>
@@ -556,9 +623,9 @@
       </div>
      </footer>
       <script src="https://kit.fontawesome.com/ba97aac3b4.js" crossorigin="anonymous"></script>
-      <script src="../Js/script.js"></script>
-
-    <script src="../Assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
-</body>
+      <script src="./script.js"></script>
+      <script src="./carrito.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
 
 </html>

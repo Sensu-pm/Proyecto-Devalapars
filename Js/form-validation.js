@@ -17,3 +17,20 @@
     }, false)
   })
 })()
+
+
+
+//funcion estado del pedido
+function status () {
+  var numPedido =
+   document.getElementById("numPedido").value
+   var message = "<p>Estado del pedido " + numPedido +  ": ENVIADO </p>" + "<p>Fecha: 20/Marzo/2023 | Productos: El quinto día | Total: $150</p>";
+
+  document
+  .getElementById("detalles")
+  .innerHTML = message;
+
+
+}
+=======
+

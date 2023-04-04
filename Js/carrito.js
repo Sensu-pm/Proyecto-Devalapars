@@ -1,14 +1,14 @@
-const ClickButton = document.querySelectorAll('.card-btn, .boton')
+const ClickButton = document.querySelectorAll('.card-btn, .boton')// seleccionamos los botones de las card
 
  const tbody = document.querySelector('tbody')
 
-let carrito = []
+let carrito = [] //array que es renderizado
 
 ClickButton.forEach(btn => {
-  btn.addEventListener('click', addToCarritoItem)
+  btn.addEventListener('click', addToCarritoItem)//recorremos los botones
 })
 
-
+// seleccionamos las clases que queremos mostrar en el carrito, imagen titulo, precio
 function addToCarritoItem (e){
   const button = e.target
   const item = button.closest('.product-card, .card')
@@ -26,10 +26,9 @@ function addToCarritoItem (e){
   addItemCarrito(objetosCarrito)
 
 }
-
+// agregamos al array
 function addItemCarrito (objetosCarrito){
   
-
 const inputElemento = tbody.getElementsByClassName('input__elemento')
 
   for (let i = 0; i < carrito.length; i++) {
@@ -47,14 +46,13 @@ const inputElemento = tbody.getElementsByClassName('input__elemento')
 
    renderCarrito()
 
-  console.log(objetosCarrito);
 }
 
 
 
 
 
-
+// rederizamos la tabla (carrito)
 function renderCarrito(){
 
   tbody.innerHTML = ""

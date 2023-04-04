@@ -19,6 +19,7 @@
 })()
 
 
+
 //funcion estado del pedido
 function status () {
   var numPedido =
@@ -31,3 +32,5 @@ function status () {
 
 
 }
+=======
+

@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capybara Books: Manga</title>
+    <title>Manga</title>
+    <link rel="icon" href="/img/logo-transparente.png">
+
     <link rel="stylesheet" href="../Assets/bootstrap-5.2.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Styles/style-navbar-Dan.css">
     <link rel="stylesheet" href="../Styles/footer.css">
     <link rel="stylesheet" href="../Styles/cultura.css">
+    <link rel="stylesheet" href="../Styles/carrito.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +23,10 @@
     <header>
         <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" style="background-color: #D9D9D9;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../Pages/index.html">
-                    <img src="../img/logo-transparente.png" alt="Bootstrap" width="50" height="50">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="/Img/logo-transparente.png" alt="Bootstrap" width="50" height="50">
                 </a>
-
+    
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -34,8 +37,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../Pages/aboutus.html">Quiénes
-                                    somos</a>
+                                <a class="nav-link active" aria-current="page" href="../Pages/aboutus.html">Quiénes somos</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -44,28 +46,23 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="../Pages/manga.html">Manga</a></li>
-                                    <li><a class="dropdown-item" href="#">Terror</a></li>
-                                    <li><a class="dropdown-item" href="../Pages/cienciaFiccion.html">Ciencia Ficción</a></li>
-                                    <li><a class="dropdown-item" href="#">Romance</a></li>
+                                    <li><a class="dropdown-item" href="../Pages/terror.html">Terror</a></li>
+                                    <li><a class="dropdown-item" href="../Pages/cienciaaficcion.html" >Ciencia Ficción</a></li>
+                                    <li><a class="dropdown-item" href="../Pages/romance.html">Romance</a></li>
                                     <li><a class="dropdown-item" href="../Pages/cultura.html">Cultura</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Otros artículos</a>
+                                <a class="nav-link" href="../Pages/otrosarticulos.html">Otros artículos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../Pages/Contactanos.html">Contáctanos</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="¿Qué titulo buscas?"
-                                aria-label="Search">
-                            <button class="btn btn-outline-success" style="background-color: #5CA7A3; color: #F0E9E3;"
-                                type="submit">Buscar</button>
-                        </form>
+                        
                     </div>
                 </div>
-                <!-- Iconos -->
+    <!-- Iconos -->
                 <div class="row">
                     <div class="col-sm-6 col-6">
                         <ul class="navbar-nav d-flex flex-row">
@@ -76,21 +73,56 @@
                                 </a>
                             </li>
                             <!-- Icon dropdown -->
+    
+                            <button class="btn tbody" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-cart3" style=" color: #A18262;"></i></button>
                             <li class="nav-item me-3 me-lg-0">
-                                <a class="nav-link" href="../Pages/Pago.html">
-                                    <i class="bi bi-cart3" style=" color: #A18262;"></i>
-                                </a>
+                                
                         </ul>
                     </div>
-
+    
                 </div>
-
-
-
+                
+                
+    
             </div>
         </nav>
-    </header> <!--termina navbar-->
-
+    </header> <!--Termina navbar-->
+    <!--Todo lo que sigue es IMPORTANTE para que funcione el carrito-->
+    <div class="offcanvas offcanvas-end tbody" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="contenedor-productos">
+          <table class="carrito table">
+              <thead>
+                <tr class="style">
+                  <th scope="col">#</th>
+                  <th scope="col">Productos</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Cantidad</th>
+                </tr>
+              </thead>
+              <tbody class="col-4 tbody table-striped">
+                  <!-- tr de js  -->
+      
+                  
+              </tbody>
+            </table>
+            <br><br>
+            <div class="row mx-4">
+              <div class="col">
+                  <h3 class="itemCartTotal">Total: 0</h3>
+              </div>
+              <div class="col d-flex justify-content-end">
+                <a class="nav-link" href="./Pago.html">   <div class="btn btn-success">Ir Pagar </div> </a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!--Termina lo del carrito-->
 
     <div class="container">
         <!--CARRUSEL DE LIBROS No.1-->
@@ -107,7 +139,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../img/banners/1.png" class=d-block w-100" alt="..." height="500">
+                    <img src="../img/banners/1.png" class="d-block w-100" alt="..." height="500">
                 </div>
                 <div class="carousel-item">
                     <img src="../img/banners/2.png" class="d-block w-100" alt="..." height="500">
@@ -150,8 +182,9 @@
                     <div class="product-info">
                         <h5 class="product-brand">Demon Slayer Tomo 1</h5>
                         <p class="product-short-description">Koyoharu Gotouge</p>
-                        <span class="price">$100.00</span>
+                        <span class="price">$100</span>
                     </div>
+                    
                 </div>
                 <div class="product-card">
                     <div class="product-image">
@@ -161,7 +194,7 @@
                     <div class="product-info">
                         <h5 class="product-brand">Komi-san no puede comunicarse Tomo 1</h5>
                         <p class="product-short-description">Tomohito Oda</p>
-                        <span class="price">$120.00</span>
+                        <span class="price">$120</span>
                     </div>
                 </div>
                 <div class="product-card">
@@ -173,7 +206,7 @@
                     <div class="product-info">
                         <h5 class="product-brand">Banana Fish Tomo 1</h5>
                         <p class="product-short-description">Akimi Yoshida</p>
-                        <span class="price">$199.90</span>
+                        <span class="price">$199</span>
                     </div>
                 </div>
                 <div class="product-card">
@@ -184,7 +217,7 @@
                     <div class="product-info">
                         <h5 class="product-brand">Your Name Tomo 1</h5>
                         <p class="product-short-description">Makoto Shinkai </p>
-                        <span class="price">$200.00</span>
+                        <span class="price">$200</span>
                     </div>
                 </div>
                 <div class="product-card">
@@ -195,7 +228,7 @@
                     <div class="product-info">
                         <h5 class="product-brand">One Piece Tomo 1</h5>
                         <p class="product-short-description">Eiichiro Oda</p>
-                        <span class="price">$249.90</span><span class="actual-price"></span>
+                        <span class="price">$249</span><span class="actual-price"></span>
                     </div>
                 </div>
                 <div class="product-card">
@@ -206,7 +239,7 @@
                     <div class="product-info">
                         <h5 class="product-brand">Death Note Tomo 1</h5>
                         <p class="product-short-description">Tsugumi Ohba</p>
-                        <span class="price">$249.90</span>
+                        <span class="price">$249</span>
                     </div>
                 </div>
                 <div class="product-card">
@@ -218,7 +251,7 @@
                     <div class="product-info">
                         <h5 class="product-brand">Tokyo Revengers Tomo 1</h5>
                         <p class="product-short-description">Ken Wakui</p>
-                        <span class="price">$99.90</span>
+                        <span class="price">$99</span>
                     </div>
                 </div>
                 <div class="product-card">
@@ -229,7 +262,7 @@
                     <div class="product-info">
                         <h5 class="product-brand">Las quintillizas Tomo 1</h5>
                         <p class="product-short-description">Negi Haruba </p>
-                        <span class="price">$99.90</span>
+                        <span class="price">$99</span>
                     </div>
                 </div>
             </div>
@@ -254,56 +287,57 @@
     -->
 
         <!-- section libros -->
-        <h2 class="padding-p">Libros de Ciencia Ficción</h2>
+        <h2 class="padding-p">Libros de Manga</h2>
         <br>
 
         <div class="container text-center">
             <div class="row align-items-start">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M1.jpg" class="card-img-top" alt="Death Note Tomo 1 ">
+                        <img src="../img/manga_imagenes/M1.jpg" class="portada card-img-top product-thumb" alt="Death Note Tomo 1 ">
                         <div class="card-body">
-                            <h5 class="card-title">Death Note Tomo 1 </h5>
+                            <h5 class="card-title product-brand">Death Note Tomo 1 </h5>
                             <p class="card-text">Tsugumi Ohba</p>
-                            <span class="price">$249.90</span>
-                            <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$249</p>
+                            <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                         <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M2.jpg" class="card-img-top" alt="Demon Slayer Tomo 1">
+                        <img src="../img/manga_imagenes/M2.jpg" class="portada card-img-top product-thumb" alt="Demon Slayer Tomo 1">
                         <div class="card-body">
-                            <h5 class="card-title">Demon Slayer Tomo 1</h5>
+                            <h5 class="card-title product-brand">Demon Slayer Tomo 1</h5>
                             <p class="card-text">Koyoharu Gotouge</p>
-                            <span class="price">$100.00</span>
-                            <a href="" target="_blank" class="boton bi-info-circle-fill" viewBox="0 0 16 16"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$100</p>
+                            <a href="../Pages/demonslayer.html"><button class="bi-info-circle-fill"  viewBox="0 0 16 16"></button></a>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M3.jpg" class="card-img-top" alt="Maiden Railways ">
+                        <img src="../img/manga_imagenes/M3.jpg" class="portada card-img-top product-thumb" alt="Maiden Railways ">
                         <div class="card-body">
-                            <h5 class="card-title">Maiden Railways </h5>
+                            <h5 class="card-title product-brand">Maiden Railways </h5>
                             <p class="card-text">Asumiko Nakamura </p>
-                            <span class="price">$269.90</span>
-                            <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$269</p>
+                            <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M4.jpg" class="card-img-top" alt="This Wonderful Season With You">
+                        <img src="../img/manga_imagenes/M4.jpg" class="portada card-img-top product-thumb" alt="This Wonderful Season With You">
                         <div class="card-body">
-                            <h5 class="card-title">TWSWY</h5>
+                            <h5 class="card-title product-brand">TWSWY</h5>
                             <p class="card-text">Atsuko Yusen</p>
-                            <span class="price">$229.90</span>
-                            <a href="" target="_blank" class="boton bi-info-circle-fill" viewBox="0 0 16 16"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$229</p>
+                            <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
@@ -317,49 +351,49 @@
             <div class="row align-items-start">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M5.jpg" class="card-img-top" alt="Komi-san no puede comunicarse Tomo 1 ">
+                        <img src="../img/manga_imagenes/M5.jpg" class="portada card-img-top product-thumb" alt="Komi-san no puede comunicarse Tomo 1 ">
                         <div class="card-body">
-                            <h5 class="card-title">Komi-san Tomo 1 </h5>
+                            <h5 class="card-title product-brand">Komi-san Tomo 1 </h5>
                             <p class="card-text">Tomohito Oda</p>
-                            <span class="price">$120.00</span>
-                            <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$120</p>
+                            <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M6.jpg" class="card-img-top" alt="Las quintillizas Tomo 1">
+                        <img src="../img/manga_imagenes/M6.jpg" class="portada card-img-top product-thumb" alt="Las quintillizas Tomo 1">
                         <div class="card-body">
-                            <h5 class="card-title">Las quintillizas Tomo 1</h5>
+                            <h5 class="card-title product-brand">Las quintillizas Tomo 1</h5>
                             <p class="card-text">Negi Haruba</p>
-                            <span class="price">$99.90</span>
-                            <a href="" target="_blank" class="boton bi-info-circle-fill" viewBox="0 0 16 16"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$99</p>
+                            <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M7.jpg" class="card-img-top" alt="Banana Fish Tomo 1">
+                        <img src="../img/manga_imagenes/M7.jpg" class="portada card-img-top product-thumb" alt="Banana Fish Tomo 1">
                         <div class="card-body">
-                            <h5 class="card-title">Banana Fish Tomo 1</h5>
+                            <h5 class="card-title product-brand">Banana Fish Tomo 1</h5>
                             <p class="card-text">Akimi Yoshida</p>
-                            <span class="price">$199.90</span>
-                            <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$199</p>
+                            <a href="../Pages/bananafish.html"><button class="bi-info-circle-fill"  viewBox="0 0 16 16"></button></a>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M8.jpg" class="card-img-top" alt="Your Name Tomo 1">
+                        <img src="../img/manga_imagenes/M8.jpg" class="portada card-img-top product-thumb" alt="Your Name Tomo 1">
                         <div class="card-body">
-                            <h5 class="card-title">Your Name Tomo 1</h5>
+                            <h5 class="card-title product-brand">Your Name Tomo 1</h5>
                             <p class="card-text">Makoto Shinkai</p>
-                            <span class="price">$200.00</span>
-                            <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$200</p>
+                            <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
@@ -373,50 +407,50 @@
             <div class="row align-items-start">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M9.jpg" class="card-img-top" alt="One Piece Tomo 1">
+                        <img src="../img/manga_imagenes/M9.jpg" class="portada card-img-top product-thumb" alt="One Piece Tomo 1">
                         <div class="card-body">
-                            <h5 class="card-title">One Piece Tomo 1</h5>
+                            <h5 class="card-title product-brand">One Piece Tomo 1</h5>
                             <p class="card-text">Eiichiro Oda</p>
-                            <span class="price">$249.90</span>
-                            <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$249</p>
+                            <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M10.jpg" class="card-img-top" alt="JoJo's Bizarre Adventure Tomo 1 ">
+                        <img src="../img/manga_imagenes/M10.jpg" class="portada card-img-top product-thumb" alt="JoJo's Bizarre Adventure Tomo 1 ">
                         <div class="card-body">
-                            <h5 class="card-title">JoJo's Tomo 1 </h5>
+                            <h5 class="card-title product-brand">JoJo's Tomo 1 </h5>
                             <p class="card-text">Hirohiko Arari</p>
-                            <span class="price">$269.90</span>
-                            <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$269</p>
+                            <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M11.jpg" class="card-img-top" alt="Tokyo Revengers Tomo 1">
+                        <img src="../img/manga_imagenes/M11.jpg" class="portada card-img-top product-thumb" alt="Tokyo Revengers Tomo 1">
                         <div class="card-body">
-                            <h5 class="card-title">Tokyo Revengers Tomo 1</h5>
+                            <h5 class="card-title product-brand">Tokyo Revengers Tomo 1</h5>
                             <p class="card-text">Ken Wakui</p>
-                            <span class="price">$99.90</span>
-                            <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$99</p>
+                            <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="../img/manga_imagenes/M12.jpg" class="card-img-top" alt="Attack on Titan Tomo 1">
+                        <img src="../img/manga_imagenes/M12.jpg" class="portada card-img-top product-thumb" alt="Attack on Titan Tomo 1">
                         <div class="card-body">
-                            <h5 class="card-title">Attack on Titan Tomo 1</h5>
+                            <h5 class="card-title product-brand">Attack on Titan Tomo 1</h5>
                             <p class="card-text">Hajime Isayama</p>
-                            <span class="price">$149.90</span>
-                            <a href="" target="_blank" class="boton bi bi-info-circle-fill"></a>
-                            <a href="" target="_blank" class="boton bi bi-cart"></a>
+                            <p class="price">$149</p>
+                            <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                            <button class="boton bi bi-cart"></button>
                         </div>
                     </div>
                 </div>
@@ -441,9 +475,7 @@
                 <br>
                 <div class="col">
                     <div class="align-content-around">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta, sit cum culpa dolores
-                        debitis, quia necessitatibus ex beatae omnis itaque tenetur consequuntur eum officia velit
-                        natus, ipsum asperiores aliquam.
+                        En CapybaraBooks, valoramos la calidad y la diversidad en la literatura. Ya sea que estés buscando un libro para disfrutar en una tarde tranquila o un regalo especial para un ser querido, en CapybaraBooks encontrarás lo que buscas.
                     </div>
                 </div>
                 <div class="col">
@@ -502,6 +534,7 @@
     </footer>
     <script src="https://kit.fontawesome.com/ba97aac3b4.js" crossorigin="anonymous"></script>
     <script src="../Js/script.js"></script>
+    <script src="../Js/carrito.js"></script>
 
     <script src="../Assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>

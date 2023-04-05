@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Separadores magnéticos</title>
+  <link rel="icon" href="/img/logo-transparente.png">
+  <link rel="stylesheet" href="../Styles/footer.css">
+  <link rel="stylesheet" href="../Styles/addToCar.css">
+  <link rel="stylesheet" href="../Styles/lightbox.css">
+  <link rel="stylesheet" href="../Styles/carrito.css">
+  <link rel="stylesheet" href="../Styles/cultura.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+   
+</head>
+
+<body style="background-color: #F0E9E3;">
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" style="background-color: #D9D9D9;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="/Img/logo-transparente.png" alt="Bootstrap" width="50" height="50">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- . -->
+            <div class="navbar-nav ms-auto container col-xs-4 col-6 col-lg-10" id="menucolap">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../Pages/aboutus.html">Quiénes somos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Libros
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../Pages/manga.html">Manga</a></li>
+                                <li><a class="dropdown-item" href="../Pages/terror.html">Terror</a></li>
+                                <li><a class="dropdown-item" href="../Pages/cienciaaficcion.html" >Ciencia Ficción</a></li>
+                                <li><a class="dropdown-item" href="../Pages/romance.html">Romance</a></li>
+                                <li><a class="dropdown-item" href="../Pages/cultura.html">Cultura</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Pages/otrosarticulos.html">Otros artículos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Pages/Contactanos.html">Contáctanos</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+<!-- Iconos -->
+            <div class="row">
+                <div class="col-sm-6 col-6">
+                    <ul class="navbar-nav d-flex flex-row">
+                        <!-- Icons -->
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link" href="../Pages/login.html">
+                                <i class="bi bi-person" style="position: absolute; color: #A18262;"></i>
+                            </a>
+                        </li>
+                        <!-- Icon dropdown -->
+
+                        <button class="btn tbody" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-cart3" style=" color: #A18262;"></i></button>
+                        <li class="nav-item me-3 me-lg-0">
+                            
+                    </ul>
+                </div>
+
+            </div>
+            
+            
+
+        </div>
+    </nav>
+</header> <!--Termina navbar-->
+<!--Todo lo que sigue es IMPORTANTE para que funcione el carrito-->
+<div class="offcanvas offcanvas-end tbody" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="contenedor-productos">
+      <table class="carrito table">
+          <thead>
+            <tr class="style">
+              <th scope="col">#</th>
+              <th scope="col">Productos</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="col-4 tbody table-striped">
+              <!-- tr de js  -->
+  
+              
+          </tbody>
+        </table>
+        <br><br>
+        <div class="row mx-4">
+          <div class="col">
+              <h3 class="itemCartTotal">Total: 0</h3>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <a class="nav-link" href="./Pago.html">   <div class="btn btn-success">Ir Pagar </div> </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+ <!--Termina lo del carrito-->
+  <br><br><br>
+  <!--Sticky-->
+  <!-- <div class="sticky-sm-bottom">
+    <img class="position-sticky bottom-50 end-100 img-fluid" translate-middle" src="../img/shopping-cart.png" alt="" srcset="">
+  </div> -->
+
+  <!--DESCRIPCIÓN DEL LIBRO-->
+  <div class="container text-center" style="margin-top: 5%;">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="../img/otros articulos/separadormichiiman.jpg" class="portada card-img-top product-thumb" alt="Separadores magnéticos Gato negro | 6pz">
+            <div class="card-body">
+                <h5 class="card-title product-brand">Separadores magnéticos Gato negro | 6pz</h5>
+                <p class="price">$89</p>
+               
+                    <button class="boton bi bi-cart"></button>
+            </div>
+        </div>
+    </div>
+      <div class="col">
+        <h2>Separadores magnéticos Gato negro | 6pz</h2>
+        <h5 align="lefth">DESCRIPCIÓN</h5><br>
+        <p class="justificar" text-brake >Marcapáginas magnéticos para los amantes de los gatos.
+            Faciles de usar: simplemente abre el imán y pon 
+            la página en el medio cerrando el imán para marcarla.</p>
+
+      </div>
+    </div><br><br>
+    
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-4">
+          <h5>CARACTERISTICAS</h5><br>
+          <table>
+            <tbody>
+                <tr>
+                    <td class="izquierdo" >Material</td>
+                    <td class="derecho">Papel, plastico, imán</td>
+                </tr>
+                <tr>
+                    <td class="izquierdo">Color </td>
+                    <td class="derecho">Negro</td>
+                </tr>
+                <tr>
+                    <td class="izquierdo">Cantidad</td>
+                    <td class="derecho">6 piezas</td>
+                </tr>
+                <tr>
+                    <td class="izquierdo">Dimensiones</td>
+                    <td class="derecho"> Variables (3.5cms aprox)</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+
+
+
+    <!--PIE DE PAGINA-->
+  <footer>
+    <!--intento de cajas-->
+    <div class="container-fluid text-center" style="background-color: #D9D9D9;">
+      <div class="row align-items-start">
+        <div class="col">
+          Sobre capybara books
+        </div>
+        <div class="col">
+          <label for="newsletter"><span class="texto">Regístrate a nuestro newsletter</span></label>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <br>
+        <div class="col">
+          <div class="align-content-around">
+            En CapybaraBooks, valoramos la calidad y la diversidad en la literatura. Ya sea que estés buscando un libro para disfrutar en una tarde tranquila o un regalo especial para un ser querido, en CapybaraBooks encontrarás lo que buscas.
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-inline">
+            <label for="email" class="form-label"></label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@correo.com"
+              style="width:min-content; display:inline-flex">
+            <button type="submit" class="btn btn-secondary btn-sm" style="display: inline-flex;">Registrarme</button>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row align-items-center">
+        <div class="col d-flex justify-content-evenly">
+          <a class="bi bi-facebook" href="https://www.facebook.com" style="color: black;"></a>
+          <a class="bi bi-twitter" href="https://www.twitter.com" style="color: black;"></a>
+          <a class="bi bi-tiktok" href="https://www.tiktok.com" style="color: black;"></a>
+          <a class="bi bi-whatsapp" href="https://www.whatsapp.com" style="color: black;"></a>
+        </div>
+        <div class="col">
+          <i class="bi bi-geo-alt-fill"></i>
+          <h6 class="info">Capylandia, México</h6>
+        </div>
+      </div>
+      <br><br>
+      <div class="row align-items-center">
+        <div class="pagos">
+          <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/american.png" alt="american express"
+            class="" width="40" height="40" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/american.png">
+          <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/carnet.png" alt="carnet" class=""
+            width="52" height="40" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/carnet.png">
+
+          <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/master-card.png" alt="master card"
+            class="" width="44" height="40" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/master-card.png">
+
+          <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/visa.png" alt="visa" class=""
+            width="90" height="38" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/visa.png">
+
+          <img data-srclazy="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/paypal.png" alt="paypal" class=""
+            width="90" height="29" src="https://www.gandhi.com.mx/media/wysiwyg/footer-sitio/paypal.png">
+
+        </div>
+        <br> <br>
+        <div class="row align-items-end">
+          <h6 class="textofinal">
+            © 2023 Copyright: Team Develapars
+          </h6>
+        </div>
+      </div>
+  </footer>
+
+
+
+    <script src="../Js/jquery-1.10.2.min.js"></script>
+    <script src="../Js/lightbox-2.6.min.js"></script>
+    <script src="../Js/carrito.js"></script>
+    <script src="../Js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

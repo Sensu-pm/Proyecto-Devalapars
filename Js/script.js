@@ -19,8 +19,8 @@ productContainers.forEach((item, i) => {
 
 let Productos;
 // Aquí se debe cambiar el URL del servicio en el BackEnd
-const URL_MAIN ='http://localhost:8080/miOtzo/productos/'; //URL a donde se hace la petición
-function addItems(div_Productos) { //div_Productos es el div donde se va a agregar los productos
+const URL_MAIN ='https://capybackend-production.up.railway.app/CapybaraBooks/libros/'; //URL a donde se hace la petición
+function addItems(div_libros) { //div_Productos es el div donde se va a agregar los productos
     
     
     
@@ -32,10 +32,10 @@ function addItems(div_Productos) { //div_Productos es el div donde se va a agreg
             console.log(json.length); //imprime el tamaño del json
             productos=json; //se guarda el json en la variable productos
             Array.from(json).forEach((p, index) => { //Toma el JSON, si es un arreglo haces el forEach. Si no lo es, mandas el error.
-                div_Productos.innerHTML += `
+                div_libros.innerHTML += `
                 <div class="col">
                 <div class="card" style="width: 18rem;">
-                  <img src="img/${p.URL_Imagen}" class="portada card-img-top product-thumb" alt="">
+                  <img src="img/${p.uRL_Imagen}" class="portada card-img-top product-thumb" alt="">
                   <div class="card-body">
                     <h5 class="card-title">${p.nombre}</h5>
                     <p class="card-text">${p.autor}</p>
@@ -51,12 +51,12 @@ function addItems(div_Productos) { //div_Productos es el div donde se va a agreg
     }).catch(function(err) { //si hay un error
         console.log(err); //imprime el error
     });
-    console.log(document.getElementById("div_Productos")); //imprime el div donde se va a agregar los productos
+    console.log(document.getElementById("div_libros")); //imprime el div donde se va a agregar los productos
    
 }// addItems
 
 window.addEventListener("load", function (){ //cuando se cargue la página
-    let div = document.getElementById("div_Productos"); //div donde se va a agregar los productos
+    let div = document.getElementById("div_libros"); //div donde se va a agregar los productos
     addItems(div); //se llama a la función addItems
    
 });

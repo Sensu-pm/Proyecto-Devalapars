@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Terror</title>
+    <link rel="icon" href="/img/logo-transparente.png">
     <link rel="stylesheet" href="../Assets/bootstrap-5.2.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Styles/style-navbar-Dan.css">
     <link rel="stylesheet" href="../Styles/footer.css">
     <link rel="stylesheet" href="../Styles/cultura.css">
+    <link rel="stylesheet" href="../Styles/carrito.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +22,8 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" style="background-color: #D9D9D9;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../Pages/index.html">
-                <img src="/Img/logo-transparente.png"  alt="Bootstrap" width="50" height="50">
+            <a class="navbar-brand" href="../index.html">
+                <img src="/Img/logo-transparente.png" alt="Bootstrap" width="50" height="50">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,26 +44,21 @@
                                 Libros
                             </a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="../Pages/manga.html">Manga</a></li>
-                              <li><a class="dropdown-item" href="../Pages/terror.html">Terror</a></li>
-                              <li><a class="dropdown-item" href="../Pages/cienciaFiccion.html">Ciencia Ficción</a></li>
-                              <li><a class="dropdown-item" href="../Pages/romance.html">Romance</a></li>
-                              <li><a class="dropdown-item" href="../Pages/cultura.html">Cultura</a></li>
-                          </ul>
+                                <li><a class="dropdown-item" href="../Pages/manga.html">Manga</a></li>
+                                <li><a class="dropdown-item" href="../Pages/terror.html">Terror</a></li>
+                                <li><a class="dropdown-item" href="../Pages/cienciaaficcion.html" >Ciencia Ficción</a></li>
+                                <li><a class="dropdown-item" href="../Pages/romance.html">Romance</a></li>
+                                <li><a class="dropdown-item" href="../Pages/cultura.html">Cultura</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Otros artículos</a>
+                            <a class="nav-link" href="../Pages/otrosarticulos.html">Otros artículos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../Pages/Contactanos.html">Contáctanos</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="¿Qué titulo buscas?"
-                            aria-label="Search">
-                        <button class="btn btn-outline-success" style="background-color: #5CA7A3; color: #F0E9E3;"
-                            type="submit">Buscar</button>
-                    </form>
+                    
                 </div>
             </div>
 <!-- Iconos -->
@@ -75,10 +72,10 @@
                             </a>
                         </li>
                         <!-- Icon dropdown -->
+
+                        <button class="btn tbody" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-cart3" style=" color: #A18262;"></i></button>
                         <li class="nav-item me-3 me-lg-0">
-                            <a class="nav-link" href="../Pages/Pago.html">
-                                <i class="bi bi-cart3" style=" color: #A18262;"></i>
-                            </a>
+                            
                     </ul>
                 </div>
 
@@ -88,7 +85,43 @@
 
         </div>
     </nav>
-</header> <!--termina navbar-->
+</header> <!--Termina navbar-->
+<!--Todo lo que sigue es IMPORTANTE para que funcione el carrito-->
+<div class="offcanvas offcanvas-end tbody" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="contenedor-productos">
+      <table class="carrito table">
+          <thead>
+            <tr class="style">
+              <th scope="col">#</th>
+              <th scope="col">Productos</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="col-4 tbody table-striped">
+              <!-- tr de js  -->
+  
+              
+          </tbody>
+        </table>
+        <br><br>
+        <div class="row mx-4">
+          <div class="col">
+              <h3 class="itemCartTotal">Total: 0</h3>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <a class="nav-link" href="./Pago.html">   <div class="btn btn-success">Ir Pagar </div> </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+ <!--Termina lo del carrito-->
     <div class="container" >
       <!--CARRUSEL DE LIBROS No.1-->
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -104,7 +137,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../img/banners/1.png" class=d-block w-100" alt="..." height="500">
+            <img src="../img/banners/1.png" class="d-block w-100" alt="..." height="500">
           </div>
           <div class="carousel-item">
             <img src="../img/banners/2.png" class="d-block w-100" alt="..." height="500">
@@ -255,175 +288,178 @@
       <br>
   
   
-      <!-- section libros -->
-      <h2 class="padding-p">Libros de Terror</h2>
-      <br>
-  
-      <div class="container text-center">
-        <div class="row align-items-start">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/Terror/casaInfernal.jpg" class="portada card-img-top product-thumb" alt="La casa infernal">
-                  <div class="card-body">
-                    <h5 class="card-title product-brand">La casa infernal</h5>
-                    <p class="card-text">Richard Matheson</p>
-                    <p class="price">$90</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-                  </div>
-                </div>
-              </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../img/Terror/chicadeallado.jpg" class="portada card-img-top product-thumb" alt="La chica de al lado">
-              <div class="card-body">
-                <h5 class="card-title">La chica de al lado</h5>
-                <p class="card-text">Hannah Rosse</p>
-                <p class="price">$220</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../img/Terror/visitante.jpg" class="portada card-img-top product-thumb" alt="El visitante">
-              <div class="card-body">
-                <h5 class="card-title">El visitante</h5>
-                <p class="card-text">Stephen King</p>
-                <p class="price">$220</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../img/Terror/Cuthulu.jpg" class="portada card-img-top product-thumb" alt="La llamada de Cthulhu">
-              <div class="card-body">
-                <h5 class="card-title">La llamada de Cthulhu</h5>
-                <p class="card-text">H. P. Lovecraft</p>
-                <p class="price">$80</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-        <!-- cols button -->
-        <br>
-        <div class="container text-center">
-          <div class="row align-items-start">
-            <div class="row align-items-center">
-  
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/Terror/resplandor.jpg" class="portada card-img-top product-thumb" alt="El Resplandor">
-                  <div class="card-body">
-                    <h5 class="card-title">El Resplandor</h5>
-                    <p class="card-text">Stephen King</p>
-                    <p class="price">$200</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/Terror/mascara.jpg" class="portada card-img-top product-thumb" alt="La mascara roja de la muerte">
-                  <div class="card-body">
-                    <h5 class="card-title">La mascara roja de la muerte</h5>
-                    <p class="card-text">Edgar Allan Poe</p>
-                    <p class="price">$105</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/Terror/frankie.jpg" class="portada card-img-top product-thumb" alt="Frankenstein">
-                  <div class="card-body">
-                    <h5 class="card-title">Frankenstein</h5>
-                    <p class="card-text">Mary W. Shelley</p>
-                    <p class="price">$95</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/Terror/jinete.jpg" class="portada card-img-top product-thumb" alt="El jinete sin cabeza">
-                  <div class="card-body">
-                    <h5 class="card-title">El jinete sin cabeza</h5>
-                    <p class="card-text">Washington Irving</p>
-                    <p class="price">$100</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/Terror/hellraiser.jpg" class="portada card-img-top product-thumb" alt="Hellraiser">
-                  <div class="card-body">
-                    <h5 class="card-title">Hellraiser</h5>
-                    <p class="card-text">Clive Barker</p>
-                    <p class="price">$130</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/Cultura_images/cuervo.jpg" class="portada card-img-top product-thumb" alt="El Cuervo">
-                  <div class="card-body">
-                    <h5 class="card-title">El Cuervo</h5>
-                    <p class="card-text">Edgar Allan Poe</p>
-                    <p class="price">$130</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/Terror/dracula.jpg" class="portada card-img-top product-thumb" alt="Dracula">
-                  <div class="card-body">
-                    <h5 class="card-title">Dracula</h5>
-                    <p class="card-text">Bram Stoker</p>
-                    <p class="price">$90</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/Terror/los del otro lado.jpg" class="portada card-img-top product-thumb" alt="Los del otro lado">
-                  <div class="card-body">
-                    <h5 class="card-title">Los del otro lado</h5>
-                    <p class="card-text">Christopher Buehlman</p>
-                    <p class="price">$90</p>
-                    <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
-                    <button class="boton bi bi-cart"></button>
-                  </div>
-                </div>
-              </div>
-    <div id="div_Productos"></div>
-            </div>
-          </div>
-        </div>
-        </div>
-    </div> <!--Temina containewr general-->
-    
+       <!-- section libros -->
+       <h2 class="padding-p">Libros de Terror</h2>
+       <br>
 
-    </div>
-    <br><br><br>
+       <div class="container text-center">
+           <div class="row align-items-start">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/casaInfernal.jpg" class="portada card-img-top product-thumb" alt="La casa infernal">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">La casa infernal</h5>
+                  <p class="card-text">Richard Matheson</p>
+                  <p class="price">$90</p>
+                  <a href="../Pages/paginaLaCasaInfernal.html"><button class="bi-info-circle-fill"  viewBox="0 0 16 16"></button></a>
+                  <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/chicadeallado.jpg" class="portada card-img-top product-thumb" alt="La chica de al lado">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">La chica de al lado</h5>
+                  <p class="card-text">Hannah Rosse</p>
+                  <p class="price">$220</p>
+                      <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                      <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/visitante.jpg" class="portada card-img-top product-thumb" alt="El visitante">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">El visitante</h5>
+                  <p class="card-text">Stephen King</p>
+                  <p class="price">$220</p>
+                      <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                      <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/Cuthulu.jpg" class="portada card-img-top product-thumb" alt="La llamada de Cthulhu">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">La llamada de Cthulhu</h5>
+                  <p class="card-text">H. P. Lovecraft</p>
+                  <p class="price">$80</p>
+                      <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                      <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+           </div>
+       </div>
+       <br>
+
+       <!-- segunda fila -->
+       
+       <div class="container text-center">
+           <div class="row align-items-start">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/resplandor.jpg" class="portada card-img-top product-thumb" alt="El Resplandor">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">El Resplandor</h5>
+                  <p class="card-text">Stephen King</p>
+                  <p class="price">$200</p>
+                  <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                  <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/mascara.jpg" class="portada card-img-top product-thumb" alt="La mascara roja de la muerte">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">La mascara roja de la muerte</h5>
+                  <p class="card-text">Edgar Allan Poe</p>
+                  <p class="price">$105</p>
+                  <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                  <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/frankie.jpg" class="portada card-img-top product-thumb" alt="Frankenstein">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">Frankenstein</h5>
+                  <p class="card-text">Mary W. Shelley</p>
+                  <p class="price">$95</p>
+                  <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                  <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/jinete.jpg" class="portada card-img-top product-thumb" alt="El jinete sin cabeza">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">El jinete sin cabeza</h5>
+                  <p class="card-text">Washington Irving</p>
+                  <p class="price">$100</p>
+                  <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                  <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+           </div>
+       </div>
+       <br>
+
+       <!-- tercera y ultima fila -->
+
+       <div class="container text-center">
+           <div class="row align-items-start">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/hellraiser.jpg" class="portada card-img-top product-thumb" alt="Hellraiser">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">Hellraiser</h5>
+                  <p class="card-text">Clive Barker</p>
+                  <p class="price">$130</p>
+                  <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                  <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Cultura_images/cuervo.jpg" class="portada card-img-top product-thumb" alt="El Cuervo">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">El Cuervo</h5>
+                  <p class="card-text">Edgar Allan Poe</p>
+                  <p class="price">$130</p>
+                  <a href="../Pages/paginaDelCuervo.html"><button class="bi-info-circle-fill"  viewBox="0 0 16 16"></button></a>
+                  <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/dracula.jpg" class="portada card-img-top product-thumb" alt="Dracula">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">Dracula</h5>
+                  <p class="card-text">Bram Stoker</p>
+                  <p class="price">$90</p>
+                  <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                  <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="../img/Terror/los del otro lado.jpg" class="portada card-img-top product-thumb" alt="Los del otro lado">
+                <div class="card-body">
+                  <h5 class="card-title product-brand">Los del otro lado</h5>
+                  <p class="card-text">Christopher Buehlman</p>
+                  <p class="price">$90</p>
+                  <button class="bi-info-circle-fill" viewBox="0 0 16 16"></button>
+                  <button class="boton bi bi-cart"></button>
+                </div>
+              </div>
+            </div>
+           </div>
+       </div>
+       <br>
+   </div>
+   </div> <!--Temina containewr general-->
+   <br><br><br>
     <footer>
       <!--intento de cajas-->
       <div class="container-fluid text-center">
@@ -439,7 +475,7 @@
           <br>
           <div class="col">
             <div class="align-content-around">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta, sit cum culpa dolores debitis, quia necessitatibus ex beatae omnis itaque tenetur consequuntur eum officia velit natus, ipsum asperiores aliquam.
+              En CapybaraBooks, valoramos la calidad y la diversidad en la literatura. Ya sea que estés buscando un libro para disfrutar en una tarde tranquila o un regalo especial para un ser querido, en CapybaraBooks encontrarás lo que buscas.
             </div>
           </div>
           <div class="col">

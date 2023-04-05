@@ -7,6 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
     <title>Carrito</title>
+    <link rel="icon" href="/img/logo-transparente.png">
 
 
     <!-- bootstrap -->
@@ -29,8 +30,8 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" style="background-color: #D9D9D9;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../Pages/index.html">
-                <img src="/Img/logo-transparente.png"  alt="Bootstrap" width="50" height="50">
+            <a class="navbar-brand" href="../index.html">
+                <img src="/Img/logo-transparente.png" alt="Bootstrap" width="50" height="50">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -51,26 +52,21 @@
                                 Libros
                             </a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="../Pages/manga.html">Manga</a></li>
-                              <li><a class="dropdown-item" href="../Pages/terror.html">Terror</a></li>
-                              <li><a class="dropdown-item" href="../Pages/cienciaFiccion.html">Ciencia Ficción</a></li>
-                              <li><a class="dropdown-item" href="../Pages/romance.html">Romance</a></li>
-                              <li><a class="dropdown-item" href="../Pages/cultura.html">Cultura</a></li>
-                          </ul>
+                                <li><a class="dropdown-item" href="../Pages/manga.html">Manga</a></li>
+                                <li><a class="dropdown-item" href="../Pages/terror.html">Terror</a></li>
+                                <li><a class="dropdown-item" href="../Pages/cienciaaficcion.html" >Ciencia Ficción</a></li>
+                                <li><a class="dropdown-item" href="../Pages/romance.html">Romance</a></li>
+                                <li><a class="dropdown-item" href="../Pages/cultura.html">Cultura</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Otros artículos</a>
+                            <a class="nav-link" href="../Pages/otrosarticulos.html">Otros artículos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../Pages/Contactanos.html">Contáctanos</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="¿Qué titulo buscas?"
-                            aria-label="Search">
-                        <button class="btn btn-outline-success" style="background-color: #5CA7A3; color: #F0E9E3;"
-                            type="submit">Buscar</button>
-                    </form>
+                    
                 </div>
             </div>
 <!-- Iconos -->
@@ -84,10 +80,10 @@
                             </a>
                         </li>
                         <!-- Icon dropdown -->
+
+                        <button class="btn tbody" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-cart3" style=" color: #A18262;"></i></button>
                         <li class="nav-item me-3 me-lg-0">
-                            <a class="nav-link" href="../Pages/Pago.html">
-                                <i class="bi bi-cart3" style=" color: #A18262;"></i>
-                            </a>
+                            
                     </ul>
                 </div>
 
@@ -97,7 +93,43 @@
 
         </div>
     </nav>
-</header> <!--termina navbar-->
+</header> <!--Termina navbar-->
+<!--Todo lo que sigue es IMPORTANTE para que funcione el carrito-->
+<div class="offcanvas offcanvas-end tbody" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="contenedor-productos">
+      <table class="carrito table">
+          <thead>
+            <tr class="style">
+              <th scope="col">#</th>
+              <th scope="col">Productos</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="col-4 tbody table-striped">
+              <!-- tr de js  -->
+  
+              
+          </tbody>
+        </table>
+        <br><br>
+        <div class="row mx-4">
+          <div class="col">
+              <h3 class="itemCartTotal">Total: 0</h3>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <a class="nav-link" href="./Pago.html">   <div class="btn btn-success">Ir Pagar </div> </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+ <!--Termina lo del carrito-->
 
 <body class="bg-light">
 <div class="container">

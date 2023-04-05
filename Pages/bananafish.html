@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capybara Books: Banana Fish</title>
+    <title>Banana Fish</title>
+    <link rel="icon" href="/img/logo-transparente.png">
     <link rel="stylesheet" href="../Styles/footer.css">
     <link rel="stylesheet" href="../Styles/addToCar.css">
     <link rel="stylesheet" href="../Styles/lightbox.css">
+    <link rel="stylesheet" href="../Styles/cultura.css">
+    <link rel="stylesheet" href="../Styles/carrito.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -33,9 +36,10 @@
     <header>
         <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" style="background-color: #D9D9D9;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../Pages/index.html">
-                    <img src="../img/logo-transparente.png" alt="Bootstrap" width="50" height="50">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="/Img/logo-transparente.png" alt="Bootstrap" width="50" height="50">
                 </a>
+    
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -46,8 +50,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../Pages/aboutus.html">Quiénes
-                                    somos</a>
+                                <a class="nav-link active" aria-current="page" href="../Pages/aboutus.html">Quiénes somos</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -57,27 +60,22 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="../Pages/manga.html">Manga</a></li>
                                     <li><a class="dropdown-item" href="../Pages/terror.html">Terror</a></li>
-                                    <li><a class="dropdown-item" href="../Pages/cienciaFiccion.html">Ciencia Ficción</a></li>
+                                    <li><a class="dropdown-item" href="../Pages/cienciaaficcion.html" >Ciencia Ficción</a></li>
                                     <li><a class="dropdown-item" href="../Pages/romance.html">Romance</a></li>
                                     <li><a class="dropdown-item" href="../Pages/cultura.html">Cultura</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Otros artículos</a>
+                                <a class="nav-link" href="../Pages/otrosarticulos.html">Otros artículos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../Pages/Contactanos.html">Contáctanos</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="¿Qué titulo buscas?"
-                                aria-label="Search">
-                            <button class="btn btn-outline-success" style="background-color: #5CA7A3; color: #F0E9E3;"
-                                type="submit">Buscar</button>
-                        </form>
+                        
                     </div>
                 </div>
-                <!-- Iconos -->
+    <!-- Iconos -->
                 <div class="row">
                     <div class="col-sm-6 col-6">
                         <ul class="navbar-nav d-flex flex-row">
@@ -88,21 +86,56 @@
                                 </a>
                             </li>
                             <!-- Icon dropdown -->
+    
+                            <button class="btn tbody" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-cart3" style=" color: #A18262;"></i></button>
                             <li class="nav-item me-3 me-lg-0">
-                                <a class="nav-link" href="../Pages/Pago.html">
-                                    <i class="bi bi-cart3" style=" color: #A18262;"></i>
-                                </a>
+                                
                         </ul>
                     </div>
-
+    
                 </div>
-
-
-
+                
+                
+    
             </div>
         </nav>
-    </header>
-    <!--termina navbar-->
+    </header> <!--Termina navbar-->
+    <!--Todo lo que sigue es IMPORTANTE para que funcione el carrito-->
+    <div class="offcanvas offcanvas-end tbody" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="contenedor-productos">
+          <table class="carrito table">
+              <thead>
+                <tr class="style">
+                  <th scope="col">#</th>
+                  <th scope="col">Productos</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Cantidad</th>
+                </tr>
+              </thead>
+              <tbody class="col-4 tbody table-striped">
+                  <!-- tr de js  -->
+      
+                  
+              </tbody>
+            </table>
+            <br><br>
+            <div class="row mx-4">
+              <div class="col">
+                  <h3 class="itemCartTotal">Total: 0</h3>
+              </div>
+              <div class="col d-flex justify-content-end">
+                <a class="nav-link" href="./Pago.html">   <div class="btn btn-success">Ir Pagar </div> </a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+     <!--Termina lo del carrito-->
     <br><br><br>
     <!--Sticky-->
     <!-- <div class="sticky-sm-bottom">
@@ -113,60 +146,51 @@
     <div class="container text-center" style="margin-top: 5%;">
         <div class="row">
             <div class="col">
-                <div class="card h-60 w-50">
-                    <a class="example-image-link" href="../img/manga_imagenes/M7.jpg" data-lightbox="example-set">
-                        <img src="../img/manga_imagenes/M7.jpg" height="100%" width="100%" class="card-img-top"
-                            alt="Banana Fish Tomo 1">
-                    </a>
-                    <div class="card-footer">
-                        <small class="text-muted">
-                            <p class="price">$199.90</p>
-                            <a href="" target="_blank" class="card-link"><img src="../img/cart-shopping-solid.svg"
-                                    alt="" width="30px"></a>
-                            <a href="" target="_blank" class="card-link"><img src="/" alt="" width="30px"></a>
-                        </small>
+                <div class="card" style="width: 18rem;">
+                    <img src="../img/manga_imagenes/M7.jpg" class="portada card-img-top product-thumb" alt="Así habló Zaratustra">
+                    <div class="card-body">
+                        <h5 class="card-title product-brand">Banana Fish Tomo 1</h5>
+                        <p class="card-text">Akimi Yoshida</p>
+                        <p class="price">$199</p>
+                        <button class="boton bi bi-cart"></button>
                     </div>
                 </div>
             </div>
+            
             <div class="col">
                 <h2>Banana Fish Tomo 1</h2>
                 <h5 align="lefth">SINOPSIS</h5><br>
-                <p class="justificar">Tanjiro Kamado es un chico alegre y trabajador que vive felizmente junto a su
-                    familia, hasta que un fatídico día un demonio llamado Muzan irrumpe en su vida matando a sus padres
-                    y maldice a su hermana pequeña convirtiéndola en demonio. Tras este incidente, y con el propósito de
-                    vengar a sus padres y devolver a su hermana Nezuko a la normalidad, decide convertirse en un asesino
-                    de demonios. Para ello, acude en ayuda de Sakonji Urokodaki, uno de los asesinos de demonios más
-                    fuertes del mundo… Entre samuráis, afiladas katanas, demonios y otros seres mitológicos del folclore
-                    japonés, este manga es una apuesta segura para los amantes del género.</p>
+                <p class="justificar" "text-brake ">"Banana Fish" es un manga japonés creado por Akimi Yoshida. La historia comienza con Ash investigando un misterioso medicamento llamado "Banana Fish" que ha dejado a su hermano en un estado catatónico. A medida que Ash profundiza en la conspiración detrás de "Banana Fish", se ve envuelto en un mundo de crimen organizado, corrupción política y traición, mientras Eiji lucha por protegerlo en esta emocionante historia de acción y suspenso. El tomo 1 establece la premisa de la trama y presenta a los personajes principales, prometiendo una historia emocionante y llena de intriga.></p>
             </div>
         </div><br><br>
         <div class="row">
-            <div class="col">
+            <div class="col-4">
                 <h5>CARACTERISTICAS</h5><br>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td class="izquierdo">Número de paginas</td>
-                            <td class="derecho">200</td>
-                        </tr>
-                        <tr>
-                            <td class="izquierdo">Idiomas</td>
-                            <td class="derecho">Español</td>
-                        </tr>
-                        <tr>
-                            <td class="izquierdo">Fecha de publicación</td>
-                            <td class="derecho">14 julio 2020</td>
-                        </tr>
-                        <tr>
-                            <td class="izquierdo">Dimensiones</td>
-                            <td class="tamaños">14.29 x 1.52 x 20.64 cm</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="izquierdo" id="paginas">Número de paginas</td>
+                    <td class="derecho">200</td>
+                  </tr>
+                  <tr>
+                    <td class="izquierdo" id="mundo">Idiomas</td>
+                    <td class="derecho">Español</td>
+                  </tr>
+                  <tr>
+                    <td class="izquierdo" id="fecha">Fecha de publicación</td>
+                    <td class="derecho">14 julio 2020</td>
+                  </tr>
+                  <tr>
+                    <td class="izquierdo">Dimensiones</td>
+                    <td class="derecho">14.29 x 1.52 x 20.64 cm</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
         </div>
     </div>
     <br><br><br>
+    
 
 
 
@@ -187,11 +211,7 @@
                 <br>
                 <div class="col">
                     <div class="align-content-around">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta, sit cum culpa dolores
-                        debitis, quia
-                        necessitatibus ex beatae omnis itaque tenetur consequuntur eum officia velit natus, ipsum
-                        asperiores
-                        aliquam.
+                        En CapybaraBooks, valoramos la calidad y la diversidad en la literatura. Ya sea que estés buscando un libro para disfrutar en una tarde tranquila o un regalo especial para un ser querido, en CapybaraBooks encontrarás lo que buscas.
                     </div>
                 </div>
                 <div class="col">
@@ -253,6 +273,8 @@
 
     <script src="../Js/jquery-1.10.2.min.js"></script>
     <script src="../Js/lightbox-2.6.min.js"></script>
+    <script src="../Js/carrito.js"></script>
+    <script src="../Js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
